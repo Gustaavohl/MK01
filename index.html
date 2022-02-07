@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GE.finances$</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,100;1,400;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+        <header>
+            <img src="./assets/logo.svg" alt="Logo Dev Finances">
+        </header>
+     <main class="container">
+        <saction id="balance">
+           <div><h2 id="sr-only">Balanço</h2>
+
+            <div class="card">
+                <h3> 
+                    <spam>Entradas</spam>
+                    <img src="./assets/income.svg" alt="image de entradas">
+                </h3>
+                <p>R$ 5.000,00</p>
+            </div>
+        </div>
+        
+            <div class="card">
+                <h3>
+                    <span>Saídas</span>
+                    <img src="./assets/expense.svg" alt="imagem de saídas">
+                </h3>
+                <p>R$ 2.000,00</p>
+            </div>
+
+            <div class="card total">
+                <h3>
+                    <span>Total</span>
+                    <img src="./assets/total.svg" alt="image de total">
+                </h3>
+                <p>R$ 3.000,00</p>
+            </div>
+            
+           <!-- </main>-->
+
+        </saction>
+    <!-- </div>    -->
+    
+   <!--<main class="container">-->
+
+        <saction id="trasactions">
+            <h2 id="sr-only">Transações</h2>
+
+            <a href="#" onclick="modal.open()"
+            class="button new">+ Nova transação</a>
+            <table id="data-table">
+                <thead>
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                        <th>Data</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="descripition">Luz</td>
+                        <td class="expense">- R$ 500,00</td>
+                        <td class="date">23/01/2021</td>
+                        <td> <img src="assets/minus.svg" alt="Remover"></td>
+                    </tr>
+                    <tr>
+                        <td class="descripition">Criação de website</td>
+                        <td class="income">
+                             R$ 5.000,00</td>
+                        <td class="date">23/01/2021</td>
+                        <td> <img src="assets/minus.svg" alt="Remover"></td>
+                    </tr>
+                    <tr>
+                        <td class="descripition">Internet</td>
+                        <td class="expense">- R$ 200,00</td>
+                        <td class="date">23/01/2021</td>
+                        <td> <img src="assets/minus.svg" alt="Remover"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </saction>
+
+    </main>
+
+    <div class="modal-overlay  ">
+        <div class= "modal">
+            <div id="form">
+                <h2>Nova Transação</h2>
+                <form action="">
+                    <div class="input-group">
+                        <label 
+                            class="sr-only" 
+                            for="description">Descrição</label>
+                        <input 
+                            type="text" 
+                            step="0.01";
+                            id="description" 
+                            name="description"
+                            placeholder="Descrição">
+                    </div>
+
+                    <div class="input-group">
+                        <label  
+                            class="sr-only" 
+                            for="amount">valor</label>
+                        <input 
+                            type="number"
+                            id="amount" 
+                            name="amount" 
+                            placeholder="0,00"/> 
+                        <small class="help"> Use o sinal - (negativo) para despesas e , (vírgula) 
+                            para casas decimais</small>
+                    </div>
+                    <div class="input-group">
+                        <label 
+                            class="sr-only" 
+                            for="date">Data</label>
+                        <input 
+                            type="date" 
+                            id="date" 
+                            name="date"
+                            placeholder="Data">
+                    </div>
+                    <div class="input-group action">
+                        <a href="#" onclick="modal.close()"
+                        class="button cancel">Cancelar</a>
+                        <button>Salvar</button>
+                    </div>
+                 </form>
+                    
+            </div>
+        </div>
+    </div>
+    <footer class= "container">
+        <p>2022-Dev.finances$<br>
+           from-₢insider.productions
+        </p>
+    </footer>
+    <script src="./script.js">
+      
+    </script>
+
+</body>
+</html>
